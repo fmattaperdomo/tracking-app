@@ -1,0 +1,38 @@
+{
+  "name": "tracking-app",
+  "version": "1.0.0",
+  "description": "Tracking API for shipping app",
+  "main": "app.js",
+  "scripts": {
+    "dev": "tsnd --respawn --clear src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
+  },
+  "keywords": [
+    "tracking",
+    "shipping",
+    "api",
+    "clean",
+    "solid"
+  ],
+  "author": "Francisco Matta Perdomo",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.4",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.6.1",
+    "rimraf": "^5.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "env-var": "^7.4.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.1",
+    "winston": "^3.17.0"
+  }
+}

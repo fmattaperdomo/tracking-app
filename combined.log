@@ -1,0 +1,5 @@
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-06T17:03:08.256Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-06T17:04:15.554Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-06T17:04:15.567Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-06T17:04:37.918Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-06T17:04:37.931Z"}
