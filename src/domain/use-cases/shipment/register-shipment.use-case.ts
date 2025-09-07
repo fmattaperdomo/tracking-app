@@ -10,6 +10,7 @@ interface ShipmentToken {
     description: string;
     sender_contact: string;
     receiver_contact: string;
+    user: string;
   };
 }
 
@@ -39,7 +40,8 @@ export class RegisterShipment implements RegisterShipmentUseCase {
         id: shipment.id,
         description: shipment.description,
         sender_contact: shipment.sender_contact,
-        receiver_contact: shipment.receiver_contact
+        receiver_contact: shipment.receiver_contact,
+        user : shipment.user
       }
     };
   }

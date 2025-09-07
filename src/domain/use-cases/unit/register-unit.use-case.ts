@@ -7,11 +7,12 @@ interface UnitToken {
   token: string;
   unit: {
     id: string;
-    shipment_id: string;
     description: string;
     weight: string;
     dimensions: string;
     currentStatus: string;
+    user:string;
+    shipment:string;
   };
 }
 
@@ -39,11 +40,12 @@ export class RegisterUnit implements RegisterUnitUseCase {
       token: token,
       unit: {
         id: unit.id,
-        shipment_id: unit.shipment_id,
         description: unit.description,
         weight: unit.weight,
         dimensions: unit.dimensions,
         currentStatus: unit.currentStatus,
+        user: unit.user,
+        shipment: unit.shipment
       }
     };
   }

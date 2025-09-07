@@ -14,7 +14,7 @@ export class CheckpointController {
     if ( error instanceof CustomError ) {
       return res.status(error.statusCode).json({ error: error.message });
     }
-    this.logger.error({error}); 
+    this.logger.error(error); 
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 

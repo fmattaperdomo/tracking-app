@@ -5,6 +5,6 @@ export class UserEntity {
     public email: string,
     public role: string[],
     public password: string,
-    public createAt: string
+    public createdAt: string
   ) {}
 }

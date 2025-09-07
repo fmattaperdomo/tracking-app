@@ -20,7 +20,7 @@ export class CheckpointMiddleware {
       req.body.checkpoint = checkpoint;
       next();
     } catch (error) {
-      this.logger.error({error});
+      this.logger.error(error);
       res.status(500).json({ error: 'Internal server error' });
     }
  }

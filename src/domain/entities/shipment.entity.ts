@@ -4,6 +4,7 @@ export class ShipmentEntity {
     public description: string,
     public sender_contact: string,
     public receiver_contact: string,
-    public createdAt: Date
+    public createdAt: Date,
+    public user: string
   ) {}
 }

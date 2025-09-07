@@ -6,12 +6,13 @@ export class ShipmentDatasourceImpl implements ShipmentDatasource {
   constructor() {}
   
   async register( registerShipmentDto: RegisterShipmentDto ): Promise<ShipmentEntity> {
-    const { description, sender_contact, receiver_contact } = registerShipmentDto;
+    const { description, sender_contact, receiver_contact, user } = registerShipmentDto;
     try {
       const shipment = await ShipmentModel.create({
         description,
         sender_contact,
-        receiver_contact
+        receiver_contact,
+        user
       });
       await shipment.save();
       return ShipmentMapper.shipmentEntityFromObject(shipment);

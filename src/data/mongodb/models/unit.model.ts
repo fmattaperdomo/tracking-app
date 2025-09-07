@@ -1,13 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 
 const unitSchema = new Schema({
-  shipment_id: {
-    type: String,
-    required: [true, 'Please add a shipment Id'],
-    unique: true,
-    trim: true,
-    maxlength: [50, 'Shipment Id can not be more than 50 characters']
-  },  
   description: {
     type: String,
     trim: true,
@@ -29,7 +22,7 @@ const unitSchema = new Schema({
   currentStatus: {
     type: [String],
     required: true,
-    default: ['CREATED'],    
+    default: 'CREATED',    
     enum: [
       'CREATED',
       'PICKED UP',
@@ -43,8 +36,25 @@ const unitSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
-},
-);
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },  
+  shipment: {
+    type: Schema.Types.ObjectId,
+    ref: 'Shipment',
+    required: true
+  }  
+});
+
+unitSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function( doc, ret, options ) {
+    delete ret._id;
+  },
+});
 
 export const UnitModel = mongoose.model('Unit', unitSchema );

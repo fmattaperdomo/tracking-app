@@ -16,16 +16,21 @@ export class AuthDatasourceImpl implements AuthDatasource {
   ) {}
   async login( loginUserDto: LoginUserDto ): Promise<UserEntity> {
     const { email, password } = loginUserDto;
+
     try {
       const user = await UserModel.findOne({ email });
       if ( !user ) throw CustomError.badRequest('User does not exists - email');
+
       const isMatching = this.comparePassword(password, user.password);
       if ( !isMatching ) throw CustomError.badRequest('Password is not valid');
+
       return UserMapper.userEntityFromObject(user);
+
     } catch (error) {
-      this.logger.error({error}); 
+      console.log(error); 
       throw CustomError.internalServer();
     }
+
   }
   
   async register( registerUserDto: RegisterUserDto ): Promise<UserEntity> {
@@ -42,7 +47,7 @@ export class AuthDatasourceImpl implements AuthDatasource {
       await user.save();
       return UserMapper.userEntityFromObject(user);
     } catch (error) {
-      
+      this.logger.error(error); 
       if( error instanceof CustomError ) {
         throw error;
       }

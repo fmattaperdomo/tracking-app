@@ -7,10 +7,11 @@ interface CheckpointToken {
   token: string;
   checkpoint: {
     id: string;
-    unit_id: string;
     state: string;
     comment: string;
     location: string;
+    user: string;
+    unit: string;
   };
 }
 
@@ -38,10 +39,11 @@ export class RegisterCheckpoint implements RegisterCheckpointUseCase {
       token: token,
       checkpoint: {
         id: checkpoint.id,
-        unit_id: checkpoint.unit_id,
         state: checkpoint.state,
         comment: checkpoint.comment,
-        location: checkpoint.location
+        location: checkpoint.location,
+        user: checkpoint.user,
+        unit: checkpoint.unit
       }
     };
   }

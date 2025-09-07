@@ -19,7 +19,20 @@ const shipmentSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  }   
+});
+
+shipmentSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function( doc, ret, options ) {
+    delete ret._id;
+  },
 });
 
 export const ShipmentModel = mongoose.model('Shipment', shipmentSchema );

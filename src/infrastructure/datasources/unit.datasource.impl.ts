@@ -6,14 +6,15 @@ export class UnitDatasourceImpl implements UnitDatasource {
   constructor() {}
   
   async register( registerUnitDto: RegisterUnitDto ): Promise<UnitEntity> {
-    const { shipment_id, description, weight, dimensions, currentStatus } = registerUnitDto;
+    const { description, weight, dimensions, currentStatus,user,shipment } = registerUnitDto;
     try {
       const unit = await UnitModel.create({
-        shipment_id,
         description,
         weight,
         dimensions,
-        currentStatus
+        currentStatus,
+        user,
+        shipment
       });
       await unit.save();
       return UnitMapper.unitEntityFromObject(unit);

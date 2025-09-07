@@ -9,9 +9,9 @@ export class AppRoutes {
     const router = Router();
 
     router.use('/api/v1/auth', AuthRoutes.routes )
-    router.use('/api/v1/checkpoints', CheckpointRoutes.routes )
-    router.use('/api/v1/shipments', ShipmentRoutes.routes )  
-    router.use('/api/v1/units', UnitRoutes.routes ) 
+    router.use('/api/v1/checkpoint', CheckpointRoutes.routes )
+    router.use('/api/v1/shipment', ShipmentRoutes.routes )  
+    router.use('/api/v1/unit', UnitRoutes.routes ) 
 
     return router;
   }

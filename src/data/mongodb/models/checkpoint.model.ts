@@ -1,17 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 
 const checkpointSchema = new Schema({
-  unit_id: {
-    type: String,
-    required: [true, 'Please add a unit Id'],
-    unique: true,
-    trim: true,
-    maxlength: [50, 'Unit Id can not be more than 50 characters']
-  },
   state: {
     type: [String],
     required: true,
-    default: ['CREATED'],  
+    default: 'CREATED',  
     enum: [
       'CREATED',
       'PICKED UP',
@@ -35,7 +28,24 @@ const checkpointSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },  
+  unit: {
+    type: Schema.Types.ObjectId,
+    ref: 'Unit',
+    required: true
+  }  
+});
+checkpointSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function( doc, ret, options ) {
+    delete ret._id;
+  },
 });
 
 export const CheckpointModel = mongoose.model('Checkpoint', checkpointSchema );

@@ -20,7 +20,7 @@ export class AuthMiddleware {
       req.body.user = user;
       next();
     } catch (error) {
-      this.logger.error({error});
+      this.logger.error(error);
       res.status(500).json({ error: 'Internal server error' });
     }
  }

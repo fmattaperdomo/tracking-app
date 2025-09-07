@@ -1,5 +1,33 @@
-{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-06T17:03:08.256Z"}
-{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-06T17:04:15.554Z"}
-{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-06T17:04:15.567Z"}
-{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-06T17:04:37.918Z"}
-{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-06T17:04:37.931Z"}
+{"level":"error","message":"error Error: User already exists","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:27.663Z"}
+{"level":"info","message":"revisar este error","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.913Z"}
+{"level":"info","message":"fmattaperdomo12@gmail.com","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.914Z"}
+{"level":"info","message":"123456","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.914Z"}
+{"level":"info","message":"buscando email","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.915Z"}
+{"level":"info","message":"comparando password","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.918Z"}
+{"level":"info","message":"123456","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.919Z"}
+{"level":"info","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:08:38.920Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:09:29.007Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:09:29.024Z"}
+{"level":"info","message":"revisar este error","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.246Z"}
+{"level":"info","message":"fmattaperdomo12@gmail.com","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.247Z"}
+{"level":"info","message":"123456","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.247Z"}
+{"level":"info","message":"buscando email","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.248Z"}
+{"level":"info","message":"comparando password","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.264Z"}
+{"level":"info","message":"123456","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.264Z"}
+{"level":"info","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.265Z"}
+{"level":"info","message":"123456","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:09:32.269Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:10:38.959Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:10:38.972Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:10:54.709Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:10:54.728Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:11:13.542Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:11:13.559Z"}
+{"level":"info","message":"buscando email","service":"AuthDatasourceImpl","timestamp":"2025-09-07T14:11:14.779Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:12:05.536Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:12:05.551Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:12:55.591Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:12:55.603Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:14:01.382Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:14:01.396Z"}
+{"level":"info","message":"Mongo connected","service":"MongoDatabase","timestamp":"2025-09-07T14:19:32.255Z"}
+{"level":"info","message":"Server running on port 3000","service":"Server","timestamp":"2025-09-07T14:19:32.280Z"}

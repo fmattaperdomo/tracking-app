@@ -11,10 +11,13 @@ export class UnitController {
   ) {}
 
   private handleError = ( error: unknown, res: Response ) => {
+    this.logger.error(error);
+    this.logger.error(res.json);
+
     if ( error instanceof CustomError ) {
       return res.status(error.statusCode).json({ error: error.message });
     }
-    this.logger.error({error});
+    this.logger.error(error);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 
@@ -22,6 +25,9 @@ export class UnitController {
     const [error, registerUnitDto] = RegisterUnitDto.create(req.body);
     if ( error ) return res.status(400).json({ error });
     
+    this.logger.log(`Registering unit with data: ${registerUnitDto}`);
+    this.logger.error(error);
+
     new RegisterUnit(this.unitRepository)
       .execute( registerUnitDto! )
       .then( data => res.json(data) )

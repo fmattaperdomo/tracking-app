@@ -3,7 +3,7 @@ import { CustomError, ShipmentEntity } from '../../domain';
 export class ShipmentMapper {
   static shipmentEntityFromObject(object: { [key: string]:any }) {
 
-    const { id, _id, description, sender_contact, receiver_contact, createdAt } = object;
+    const { id, _id, description, sender_contact, receiver_contact, createdAt, user } = object;
 
     if ( !_id || !id ) {
       throw CustomError.badRequest('Missing id');
@@ -13,13 +13,15 @@ export class ShipmentMapper {
     if ( !sender_contact ) throw CustomError.badRequest('Missing sender contact');
     if ( !receiver_contact ) throw CustomError.badRequest('Missing receiver contact');
     if ( !createdAt ) throw CustomError.badRequest('Missing createdAt');
+    if ( !user ) throw CustomError.badRequest('Missing user ID');    
 
     return new ShipmentEntity(
       _id || id,
       description, 
       sender_contact,
       receiver_contact,
-      createdAt
+      createdAt,
+      user
     );
   }
 }

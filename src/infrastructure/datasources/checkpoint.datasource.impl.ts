@@ -6,13 +6,14 @@ export class CheckpointDatasourceImpl implements CheckpointDatasource {
   constructor() {}
   
   async register( registerCheckpointDto: RegisterCheckpointDto ): Promise<CheckpointEntity> {
-    const { unit_id, state, comment, location } = registerCheckpointDto;
+    const { state, comment, location, user, unit } = registerCheckpointDto;
     try {
       const checkpoint = await CheckpointModel.create({
-        unit_id,
         state,
         comment,
-        location
+        location,
+        user,
+        unit
       });
       await checkpoint.save();
       return CheckpointMapper.checkpointEntityFromObject(checkpoint);
